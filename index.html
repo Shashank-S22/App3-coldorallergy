@@ -49,7 +49,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         function coldAdd(){
             cold_count = cold_count + 1;
         }
-
+        
+        function showResults() {
+        var aPercent = Math.round((allergy_count/4) * 100) <!--This part of the function adds up all allergy clicks, divides by 4, and multiplies by 100 to get a percent on the display-->
+        var cPercent = Math.round((cold_count/4) * 100) <!--This part of the function adds up all the cold clicks, divides by 4, and multiplies by 100 to get a percent on the display-->
+        var resultText = document.getElementById("results") <!-- This part helps change the word results and displays actual numbers on the last page after the function has been run by a click-->
+        resultText.innerHTML = "Probability it is allergies =" + aPercent + "%" + "<br> Probability it is a cold =" + cPercent + "%"; <!-- This part is the code that does the math depending on how many clicks you got from each function, and brings in elements from last three lines to make a good looking results page-->
+}
   </script>
 
 
@@ -98,8 +104,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
     	<div id="content" class="w3-container">
 	<p>Are your eyes watery or itchy?</p>    
-	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-         	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--This function takes in all the information if you click Yes it adds to probability of allergy for the user-->
+         	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a> <!--This function takes in all the information if you click No it adds to probability of cold for the user-->
  </div><!-- /content -->
 </div>
 <!--Page 2-->
@@ -110,8 +116,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 	<p>Do you have a fever?</p>    
-       <a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> No</a>
+       <a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--This function takes in all the information if you click Yes it adds to probability of allergy for the user-->
+	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> No</a> <!--This function takes in all the information if you click No it adds to probability of cold for the user-->
+ </div><!-- /content -->
  </div><!-- /content -->
 </div>	
 <!--Page 3-->
@@ -122,8 +129,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		        <p>Do you have a sore throat?</p>    
-        <a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-         <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> No</a>
+        <a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--This function takes in all the information if you click Yes it adds to probability of allergy for the user-->
+         <a href="#four"  onclick="coldAdd();" class="w3-btn w3-black"> No</a> <!--This function takes in all the information if you click No it adds to probability of cold for the user-->
+ </div><!-- /content -->
  </div><!-- /content -->
 </div>	
 <!--Page 4-->
@@ -134,10 +142,18 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		        <p>Are your symptoms seasonal or chronic?</p>    
-        <a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-        <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No </a>
+        <a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--This function takes in all the information if you click Yes it adds to probability of allergy for the user-->
+        <a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No </a> <!--This function takes in all the information if you click No it adds to probability of cold for the user-->
+ </div><!-- /content -->
  </div><!-- /content -->
 </div>	
+<!--Results Page-->
+<div class="page" id="five">
+	<div class="w3-container w3-flat-carrot">
+	<p id = "results"> </p> 
+    <a onclick= "showResults();" class="w3-btn w3-black"> Click on Results </a> <!--This function initiates the math for calculating probability after the button has been clicked-->
+    
+
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
