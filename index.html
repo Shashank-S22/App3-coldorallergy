@@ -20,7 +20,7 @@ Brief Description of Goal of Code:
 The goal of the code is to write a function that takes user input as a number of clicks to calculate the likely probability of having a cold or allergies. 
  
 Known Issues:
-blah, blah, blah, blah
+Figuring out the last function to display results properly was challenging, did not fully understand which math function to run, and took help of mentors and labmates to try to figure that one out. 
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
@@ -51,10 +51,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         }
         
         function showResults() {
-        var aPercent = Math.round((allergy_count/4) * 100) <!--This part of the function adds up all allergy clicks, divides by 4, and multiplies by 100 to get a percent on the display-->
-        var cPercent = Math.round((cold_count/4) * 100) <!--This part of the function adds up all the cold clicks, divides by 4, and multiplies by 100 to get a percent on the display-->
-        var resultText = document.getElementById("results") <!-- This part helps change the word results and displays actual numbers on the last page after the function has been run by a click-->
-        resultText.innerHTML = "Probability it is allergies =" + aPercent + "%" + "<br> Probability it is a cold =" + cPercent + "%"; <!-- This part is the code that does the math depending on how many clicks you got from each function, and brings in elements from last three lines to make a good looking results page-->
+        var aPercent = Math.round((allergy_count/4) * 100) // This part of the function adds up all allergy clicks, divides by 4, and multiplies by 100 to get a percent on the display
+        var cPercent = Math.round((cold_count/4) * 100) // This part of the function adds up all the cold clicks, divides by 4, and multiplies by 100 to get a percent on the display
+        var resultText = document.getElementById("results") // This part helps change the word results and displays actual numbers on the last page after the function has been run by a click
+        resultText.innerHTML = "Probability it is allergies =" + aPercent + "%" + "<br> Probability it is a cold =" + cPercent + "%"; // This part is the code that does the math depending on how many clicks you got from each function, and brings in elements from last three lines to make a good looking results page
 }
   </script>
 
@@ -96,7 +96,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
-<!--Page 1-->
+<!--Page 1, page one talks about the eyes watery or itchy question, and moves onto next page-->
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
@@ -108,7 +108,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
          	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a> <!--This function takes in all the information if you click No it adds to probability of cold for the user-->
  </div><!-- /content -->
 </div>
-<!--Page 2-->
+<!--Page 2, talks about fever question, and then moves onto next page-->
 <div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 2</h1>
@@ -121,7 +121,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
  </div><!-- /content -->
  </div><!-- /content -->
 </div>	
-<!--Page 3-->
+<!--Page 3, talks about the sore throat question and moves onto the next page-->
 <div class="page" id="three">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 3</h1>
@@ -134,7 +134,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
  </div><!-- /content -->
  </div><!-- /content -->
 </div>	
-<!--Page 4-->
+<!--Page 4, talks about the symptoms question, if they are season or chronic, and then moves onto the Results page-->
 <div class="page" id="four">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 4</h1>
