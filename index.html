@@ -36,18 +36,18 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-        var allergy_count = 0;
-        var cold_count = 0;
+        var allergy_count = 0; <!--This begins allergy count so that the button can add to the count-->
+        var cold_count = 0; <!--This begins cold count so that the button can add to the count-->
 
 
         function allergyAdd(){
-            allergy_count = allergy_count + 1;
-		alert(allergy_count);
+            allergy_count = allergy_count + 1; //This part of the function will add to the allergy count once button in clicked
+		alert(allergy_count); 
 
         }
 
         function coldAdd(){
-            cold_count = cold_count + 1;
+            cold_count = cold_count + 1; //This part of the function will add to the cold count once button is clicked
         }
         
         function showResults() {
